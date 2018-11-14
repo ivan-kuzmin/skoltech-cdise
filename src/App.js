@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { Container, Sidebar, Menu, Dropdown } from "semantic-ui-react";
+
 import Cdise from "./components/Header/cdise";
 import Navbar from "./components/Header/navbar";
 import AboutScreen from "./components/AboutScreen";
@@ -13,7 +14,7 @@ import BackgroundImg from "./assets/images/bg.jpg";
 
 const ContentContainer = styled.div`
   padding-bottom: 50px;
-`
+`;
 
 class App extends Component {
   render() {

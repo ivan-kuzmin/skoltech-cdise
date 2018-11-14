@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Icon, Image } from "semantic-ui-react";
 import { people } from "../../dbs/db_people";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 const CardContainer = styled.div`
   display: flex;
@@ -64,6 +65,10 @@ export default class PeopleScreen extends Component {
   render() {
     return (
       <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Skoltech CDISE | People</title>
+        </Helmet>
         {people.map((p, index) => {
           return (
             <div style={{ flexBasis: "33.3333%" }}>

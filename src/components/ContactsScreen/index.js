@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 
 const contacts = [
   {
@@ -11,6 +12,10 @@ class ContactsScreen extends React.Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Skoltech CDISE | Contacts</title>
+        </Helmet>
         {contacts.map((c, index) => {
           return (
             <div key={index}>

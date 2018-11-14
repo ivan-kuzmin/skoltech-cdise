@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 
 export default class AboutScreen extends Component {
   render() {
     return (
       <div style={{ lineHeight: "2" }}>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Skoltech CDISE </title>
+        </Helmet>
         <h3 style={{ paddingBottom: "20px" }}>Welcome to CDISE!</h3>
         <p>
           Skoltech Center for Computational and Data-Intensive Science and

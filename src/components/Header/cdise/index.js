@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "reactstrap";
+import { Container } from "semantic-ui-react";
 import styled from "styled-components";
 import BackgroundImg from "../../../assets/images/bg.png";
 
@@ -20,7 +20,7 @@ class Cdise extends Component {
     return (
       <CdiseContainer>
         <Container>
-          <h1>Scoltech CDISE</h1>
+          <h1>Skoltech CDISE</h1>
           <h3>Center for Computational and Data-Intensive</h3>
         </Container>
       </CdiseContainer>
