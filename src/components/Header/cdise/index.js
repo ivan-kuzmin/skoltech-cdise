@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "semantic-ui-react";
 import styled from "styled-components";
-import BackgroundImg from "../../../assets/images/bg.png";
+import BackgroundImg from "../../../assets/images/bg1.jpg";
 
 const CdiseContainer = styled.div`
   background-image: url(${BackgroundImg});
@@ -10,19 +10,28 @@ const CdiseContainer = styled.div`
   background-position-x: 50%;
   background-position-y: 50%;
   color: white;
-  padding: 60px 0;
   margin-bottom: 0px;
   text-align: center;
+`;
+
+const Filter = styled.div`
+  background: rgba(0, 0, 0, 0.7);
+  padding: 80px 0;
+  height: 100%;
+  width: 100%;
+  text-align: left;
 `;
 
 class Cdise extends Component {
   render() {
     return (
       <CdiseContainer>
-        <Container>
-          <h1>Skoltech CDISE</h1>
-          <h3>Center for Computational and Data-Intensive</h3>
-        </Container>
+        <Filter>
+          <Container>
+            <h1 style={{ margin: '0 0px', fontSize: '40px' }}>Skoltech CDISE</h1>
+            <h3 style={{ margin: '0 0px', fontWeight: '100' }}>Center for Computational and Data-Intensive</h3>
+          </Container>
+        </Filter>
       </CdiseContainer>
     );
   }

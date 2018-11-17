@@ -49,9 +49,9 @@ class Research extends Component {
   render() {
     return (
       <Dropdown.Menu>
-        {researches.map((r, key) => {
+        {researches.map((r, index) => {
           return (
-            <Dropdown.Item>
+            <Dropdown.Item key={index}>
               <a
                 href={r.href}
                 target="_blank"

@@ -13,7 +13,7 @@ import ContactsScreen from "./components/ContactsScreen";
 import BackgroundImg from "./assets/images/bg.jpg";
 
 const ContentContainer = styled.div`
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 `;
 
 class App extends Component {

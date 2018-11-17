@@ -7,14 +7,22 @@ import { Helmet } from "react-helmet";
 const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
+  &:hover {
+    & h5 {
+      text-decoration: underline;
+    }
+    /* box-shadow: 0 0 5px 2px rgba(0, 1, 139, 1); */
+    opacity: 0.95;
+  }
 `;
 
 const CardImg = styled.div`
   width: 100px;
   height: 100px;
   overflow: hidden;
-  border-radius: 50%;
-  margin: 10px;
+  border-radius: 5%;
+  border: solid lightgray 1px;
+  margin: 15px;
   background-image: url(${props => props.image});
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,36 +32,15 @@ const CardImg = styled.div`
 `;
 
 class Card extends Component {
-  state = {
-    hovered: false
-  };
-
-  onToggle = () => {
-    console.log(this.state.hovered);
-    this.setState({
-      hovered: !this.state.hovered
-    });
-  };
   render() {
     const { image, name, description, position, link } = this.props;
     return (
-      <a href={link} style={{ color: "black", textDecoration: "none" }}>
-        <CardContainer
-          onMouseEnter={this.onToggle}
-          onMouseLeave={this.onToggle}
-        >
-          <CardImg
-            image={image}
-            hovered={this.state.hovered}
-            style={{
-              boxShadow: this.state.hovered
-                ? "0 0 5px 2px rgba(171, 192, 53, 1)"
-                : "none"
-            }}
-          />
-          <div style={{ width: "70%", margin: "10px 0" }}>
-            <h5>{name}</h5>
-            <p style={{ marginRight: "20px" }}>{description}</p>
+      <a href={link} style={{ color: "black", textDecoration: "none" }} target="_black" rel="noreferrer noopener">
+        <CardContainer>
+          <CardImg image={image} />
+          <div style={{ width: "70%", margin: "20px 0" }}>
+            <h5 style={{ margin: '0 0 5px 0' }}>{name}</h5>
+            <p style={{ marginRight: "20px", fontWeight: '100', fontSize: '12px' }}>{description}</p>
           </div>
         </CardContainer>
       </a>
@@ -71,7 +58,7 @@ export default class PeopleScreen extends Component {
         </Helmet>
         {people.map((p, index) => {
           return (
-            <div style={{ flexBasis: "33.3333%" }}>
+            <div key={index} style={{ flexBasis: "33.3333%" }}>
               <Card
                 image={p.img}
                 name={p.name}
