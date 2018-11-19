@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Menu, Message, Dropdown } from "semantic-ui-react";
+import { Dropdown } from "semantic-ui-react";
 
 const researches = [
   {

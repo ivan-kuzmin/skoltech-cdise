@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Container, Menu, Message, Dropdown, Sticky } from "semantic-ui-react";
 import Research from "./research";
 

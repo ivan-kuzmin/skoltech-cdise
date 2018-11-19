@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Icon, Image } from "semantic-ui-react";
+// import { Icon, Image } from "semantic-ui-react";
 import { people } from "../../dbs/db_people";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
@@ -33,14 +33,27 @@ const CardImg = styled.div`
 
 class Card extends Component {
   render() {
-    const { image, name, description, position, link } = this.props;
+    const { image, name, description, link } = this.props;
     return (
-      <a href={link} style={{ color: "black", textDecoration: "none" }} target="_black" rel="noreferrer noopener">
+      <a
+        href={link}
+        style={{ color: "black", textDecoration: "none" }}
+        target="_black"
+        rel="noreferrer noopener"
+      >
         <CardContainer>
           <CardImg image={image} />
           <div style={{ width: "70%", margin: "20px 0" }}>
-            <h5 style={{ margin: '0 0 5px 0' }}>{name}</h5>
-            <p style={{ marginRight: "20px", fontWeight: '100', fontSize: '12px' }}>{description}</p>
+            <h5 style={{ margin: "0 0 5px 0" }}>{name}</h5>
+            <p
+              style={{
+                marginRight: "20px",
+                fontWeight: "100",
+                fontSize: "12px"
+              }}
+            >
+              {description}
+            </p>
           </div>
         </CardContainer>
       </a>
