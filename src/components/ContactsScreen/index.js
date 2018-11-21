@@ -8,7 +8,7 @@ const contacts = [
     phone: "8(988)-144-14-88"
   }
 ];
-class ContactsScreen extends React.Component {
+class ContactsScreen extends Component {
   render() {
     return (
       <div>
