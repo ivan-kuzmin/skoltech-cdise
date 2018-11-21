@@ -12,3 +12,14 @@ body {
   background-image: url('./assets/images/bg.jpg');
   min-height: 100%;
 }
+
+.slider {
+  background: rgba(0,0,0,0.6);
+  max-height: 400px;
+  margin-bottom: 40px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgba(0,0,0,0.6) !important;
+}
